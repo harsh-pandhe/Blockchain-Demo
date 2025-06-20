@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Blockchain specific
+artifacts/
+cache/
+coverage/
+coverage.json
+typechain/
+
+# Hardhat files
+hardhat.config.js
+.hardhat/
+cache/
+
+# Truffle files
+.truffle/
+truffle-config.js
+
+# Testing
+coverage/
+coverage.json
+test-results/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional private keys and mnemonics
+keys/
+mnemonic.txt
+private-key.txt
