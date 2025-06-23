@@ -216,6 +216,31 @@ app.get('/consensus', function (req, res) {
         });
 });
 
+app.get('/block/:blockHash', function (req, res) {
+    const blockHash = req.params.blockHash;
+    const correctBlock = bitcoin.getBlock(blockHash);
+    if (correctBlock) {
+        res.json({
+            block: correctBlock
+        });
+    } else {
+        res.status(404).json({ error: 'Block not found.' });
+    }
+});
+
+app.get('/transaction/:transactionId', function (req, res) {
+    const transactionId = req.params.transactionId;
+    const transactionData = bitcoin.getTransaction(transactionId);
+    if (transactionData) {
+        res.json({
+            transaction: transactionData.transaction,
+            block: transactionData.block
+        });
+    } else {
+        res.status(404).json({ error: 'Transaction not found.' });
+    }
+});
+
 app.listen(port, function () {
     console.log(`Blockchain API is running on port ${port}`);
 });
