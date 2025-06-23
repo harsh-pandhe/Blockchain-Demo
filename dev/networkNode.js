@@ -241,6 +241,18 @@ app.get('/transaction/:transactionId', function (req, res) {
     }
 });
 
+app.get('/address/:address', function (req, res) {
+    const address = req.params.address;
+    const addressData = bitcoin.getAddressData(address);
+    if (addressData) {
+        res.json({
+            addressData: addressData
+        });
+    } else {
+        res.status(404).json({ error: 'Address not found.' });
+    }
+});
+
 app.listen(port, function () {
     console.log(`Blockchain API is running on port ${port}`);
 });
