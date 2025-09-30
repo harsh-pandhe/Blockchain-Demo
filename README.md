@@ -332,9 +332,11 @@ This project is licensed under the MIT License. 📄 See the [LICENSE](LICENSE) 
 
 ## Author
 
-Harsh Pandhe
+**Harsh Pandhe**
+- GitHub: [@harsh-pandhe](https://github.com/harsh-pandhe)
 
 ---
 
 **Note**: This is a educational demonstration project. Do not use in production environments.
+
 
